@@ -1,0 +1,161 @@
+:root {
+    --bg-color: #1a1c23;
+    --card-bg: #262936;
+    --accent: #ffd700;
+    --text: #f5f6fa;
+    --border: #3d4257;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 480px;
+    background-color: #111217;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+    border: 2px solid var(--border);
+}
+
+.resources {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--card-bg);
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+}
+
+.resource-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 1.1rem;
+}
+
+.action-area {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.clicker-box {
+    background: linear-gradient(145deg, #2e3244, #1e212d);
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 2px solid #ffaa00;
+    transition: transform 0.05s ease, box-shadow 0.2s;
+    user-select: none;
+}
+
+.clicker-box:active {
+    transform: scale(0.96);
+    box-shadow: 0 0 15px rgba(255, 170, 0, 0.4);
+}
+
+.chest-graphic {
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.upgrades-section, .inventory-section {
+    margin-bottom: 25px;
+}
+
+h3 {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 5px;
+    font-size: 1.1rem;
+    color: #a0a5c0;
+}
+
+.upgrade-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-bg);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid var(--border);
+}
+
+.upgrade-card p {
+    margin: 4px 0 0 0;
+    font-size: 0.85rem;
+    color: #aaa;
+}
+
+button {
+    background-color: #44bd32;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: #4cd137;
+}
+
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    background-color: #0b0c0e;
+    padding: 12px;
+    border-radius: 8px;
+    min-height: 180px;
+}
+
+.inventory-slot {
+    background-color: var(--card-bg);
+    aspect-ratio: 1;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    border: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+}
+
+.inventory-slot:hover {
+    border-color: #888;
+}
+
+.danger-btn {
+    background-color: #c23616;
+    width: 100%;
+    padding: 10px;
+}
+
+.danger-btn:hover {
+    background-color: #e84118;
+}
