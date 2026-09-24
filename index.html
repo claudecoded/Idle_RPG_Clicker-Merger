@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dungeon Idle Clicker & Merger</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <!-- Resource Dashboard -->
+        <header class="resources">
+            <div class="resource-item" title="Gold Coins">
+                <span class="icon">🪙</span>
+                <span id="gold-count">0</span>
+            </div>
+            <div class="resource-item" title="Gems">
+                <span class="icon">💎</span>
+                <span id="gem-count">0</span>
+            </div>
+            <div class="resource-item" title="Player Level">
+                <span class="icon">⭐</span>
+                <span>Level: <span id="player-level">1</span></span>
+            </div>
+        </header>
+
+        <!-- Main Clicker Core -->
+        <main class="action-area">
+            <div class="clicker-box" id="main-clicker">
+                <div class="chest-graphic">🧰</div>
+                <p>Click to Loot the Chest!</p>
+            </div>
+        </main>
+
+        <!-- Idle Core Upgrades Loop -->
+        <section class="upgrades-section">
+            <h3>Production Upgrades</h3>
+            <div class="upgrade-card" onclick="buyUpgrade('click')">
+                <div>
+                    <strong>Click Power (Key 🔑)</strong>
+                    <p>Gain more gold per individual click</p>
+                </div>
+                <button id="btn-upgrade-click">Cost: 10 🪙</button>
+            </div>
+            <div class="upgrade-card" onclick="buyUpgrade('idle')">
+                <div>
+                    <strong>Auto Miner (Gem 🟢)</strong>
+                    <p>Passively generates gold every second</p>
+                </div>
+                <button id="btn-upgrade-idle">Cost: 50 🪙</button>
+            </div>
+        </section>
+
+        <!-- Inventory Grid -->
+        <section class="inventory-section">
+            <h3>Your Item Inventory</h3>
+            <div class="inventory-grid" id="inventory-grid">
+                <!-- Dynamically generated via JavaScript -->
+            </div>
+        </section>
+
+        <!-- Danger Zone Footer -->
+        <footer>
+            <button onclick="resetGame()" class="danger-btn">Reset Game Progress</button>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
